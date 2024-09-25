@@ -1,4 +1,4 @@
-var hStyle = 'background-color: black; color: white; font-weight: bold; padding: 4px 8px';
+let hStyle = 'background-color: black; color: white; font-weight: bold; padding: 4px 8px';
 
 // VALUES
 console.log('%c VALUES:', hStyle);

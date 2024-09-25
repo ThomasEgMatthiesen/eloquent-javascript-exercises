@@ -1,17 +1,20 @@
+let hStyle = 'background-color: black; color: white; font-weight: bold; padding: 4px 8px';
 
 // Looping a triangle
 // Write a loop that makes seven calls to console.log to output the following triangle:
+
+console.log('%c Looping Triangle:', hStyle);
 
 for (let hash = "#"; hash.length <= 7; hash += "#") {
     console.log(hash);
 }
 
 
-
-
 // FizzBuzz
 // Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. 
 // For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
+
+console.log('%c FizzBuzz:', hStyle);
 
 let numbers = []; // Logged as an array for readability
 
@@ -57,9 +60,6 @@ for (let num = 1; num <= 100; num++) {
 }
 
 
-
-
-
 // Chessboard
 // Write a program that creates a string that represents an 8x8 grid, using newline characters (\\n) to separate lines. 
 // At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
@@ -72,6 +72,8 @@ for (let num = 1; num <= 100; num++) {
 // # # # # 
 //  # # # #
 // # # # #
+
+console.log('%c Chessboard:', hStyle);
 
 let string = "";
 
@@ -97,7 +99,6 @@ for (let x = 0; x <= 7; x++) {
 }
 
 console.log(string);
-
 
 // When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
 
@@ -127,7 +128,6 @@ for (let x = 0; x <= size - 1; x++) {
 
 console.log(string);
 
-
 // Optimized version after reading hints:
 
 size = 8;
@@ -136,14 +136,14 @@ string = "";
 for (let x = 0; x < size; x++) {
 
     for (let i = 0; i < size; i++) {
-        if ((x + i) % 2 === 0) {
+        if ((x + i) % 2 === 0) { // see if x + i is even/odd
             string += " ";
         } else {
             string += "#";
         }
     }
 
-    string += "\\n";
+    string += "\n";
 }
 
 console.log(string);
