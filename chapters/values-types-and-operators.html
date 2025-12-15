@@ -9,7 +9,17 @@
     <body>
         <p><a href="/">Table of Contents</a></p>
         <h1>01. Values, Types and Operators</h1>
-        <i>Open console to see notes and thoughts...</i>
+        <i>Open console to see solutions and results...</i>
+        <pre class="codeblock" id="code"></pre>
+
+        <script>
+            fetch('/scripts/values-types-and-operators.js')
+                .then(res => res.text())
+                .then(code => {
+                    document.querySelector('.codeblock').textContent = code;
+                });
+        </script>
+
         <script src="/scripts/values-types-and-operators.js"></script>
     </body>
 </html>

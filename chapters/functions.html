@@ -9,7 +9,17 @@
     <body>
         <p><a href="/">Table of Contents</a></p>
         <h1>03. Functions</h1>
-        <i>Open <a href="/scripts/functions.js" target="_blank">script</a> and console to see exercises, solutions and results...</i>
+        <i>Open console to see solutions and results...</i>
+        <pre class="codeblock" id="code"></pre>
+
+        <script>
+            fetch('/scripts/functions.js')
+                .then(res => res.text())
+                .then(code => {
+                    document.querySelector('.codeblock').textContent = code;
+                });
+        </script>
+
         <script src="/scripts/functions.js"></script>
     </body>
 </html>
